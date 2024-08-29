@@ -1,0 +1,247 @@
+/* Reset some basic elements */
+
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url("g20.jpg");
+    background-position: inherit;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Keyframes for container appearance */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Container styling with animation */
+
+.container {
+    background-color: rgba(255, 255, 255, 0.00); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+    transition: box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.00); /* Fallback for browsers that don't support backdrop-filter */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+    transition: box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Modern browsers */
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+}
+
+
+
+.container:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Heading styling */
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color:white;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    font-weight: 600;
+}
+
+
+/* Search box styling */
+
+.search-box {
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.search-box label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: white;
+}
+
+.search-box input,
+.search-box select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+.search-box input:focus,
+.search-box select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+
+/* Keyframes for button bounce effect */
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.search-box button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: bounce 2s infinite;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Keyframes for result item slide-in */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Results section styling */
+
+.results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+.result-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.result-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.result-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.result-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.result-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+    .search-box input,
+    .search-box select {
+        width: 100%;
+    }
+}
+
+.search-box input,
+.search-box select {
+    width: calc(100% - 20px);
+    /* Already responsive */
+}
+
+.search-box button {
+    width: 100%;
+}
+.logo {
+    display: block;
+    margin: 20px auto; /* Centers the logo horizontally */
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+}
+
