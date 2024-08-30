@@ -7,10 +7,11 @@ p {
     padding: 0;
     font-family: 'Arial', sans-serif;
     color: white;
+    background-color: #134982;
 }
 
 body {
-    background-image: url("g20.jpg");
+    background-image: url("library.jpg");
     background-position: inherit;
     background-color: #f0f4f8;
     display: flex;
@@ -39,35 +40,24 @@ body {
 /* Container styling with animation */
 
 .container {
-    background-color: rgba(255, 255, 255, 0.00); /* Semi-transparent white */
+    /* Semi-transparent white */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
     text-align: center;
-    animation: fadeIn 0.6s ease-out;
-    transition: box-shadow 0.3s ease;
-    backdrop-filter: blur(10px); /* Apply blur effect */
+    /* Apply blur effect */
 }
+
 .container {
-    background-color: rgba(255, 255, 255, 0.00); /* Fallback for browsers that don't support backdrop-filter */
+    /* Fallback for browsers that don't support backdrop-filter */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
     text-align: center;
-    animation: fadeIn 0.6s ease-out;
-    transition: box-shadow 0.3s ease;
-    backdrop-filter: blur(10px); /* Modern browsers */
-    -webkit-backdrop-filter: blur(10px); /* Safari */
-}
-
-
-
-.container:hover {
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    /* Modern browsers */
+    /* Safari */
 }
 
 
@@ -76,11 +66,12 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 24px;
-    color:white;
+    color: white;
     font-weight: 600;
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards;
     font-weight: 600;
+    background-color: #0056b3;
 }
 
 
@@ -97,8 +88,10 @@ h1 {
 .search-box label {
     font-weight: bold;
     margin-bottom: 5px;
-    display: block;
     color: white;
+    background-color: #256fbd;
+    display: inline;
+    font-size: 20px;
 }
 
 .search-box input,
@@ -238,10 +231,14 @@ h1 {
 .search-box button {
     width: 100%;
 }
+
 .logo {
     display: block;
-    margin: 20px auto; /* Centers the logo horizontally */
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio */
+    margin: 20px auto;
+    /* Centers the logo horizontally */
+    width: 150px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintains the aspect ratio */
+    border-radius: 8px;
 }
-
