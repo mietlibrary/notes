@@ -1,6 +1,6 @@
 // Data structure for subject notes and question papers
 const libraryData = {
-    "CS3391": {
+    "CS101": {
         "notes": "https://drive.google.com/file/d/1AwOH9ViEQLDvmVZRN6_BQu2iryfMnmwL/view?usp=drive_link",
         "questionPaper": "https://drive.google.com/file/d/1PCIA56gss09RifqKO5eWxNITjD0qjlOM/view?usp=drive_link"
     },
